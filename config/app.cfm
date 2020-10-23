@@ -8,7 +8,7 @@
 	*/
 
 	// Added via CFWheels CLI
-	this.name = "exampleApp";
+	//this.name = "exampleApp";
 
 	// buffer the output of a tag/function body to output in case of a exception
 	// Currently setting this to true as otherwise you can't do dump then abort in a controller for debugging in
@@ -57,6 +57,4 @@
 		this.tag.mail.server="127.0.0.1";
 		this.tag.mail.port=25;
 	}
-
-
 </cfscript>

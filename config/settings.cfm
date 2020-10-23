@@ -16,17 +16,23 @@
 
 	// Reload your application with ?reload=true&password=changeme
 	// Obviously, change this.
-	set(reloadPassword="changeme");
+	//set(reloadPassword="changeme");
 
 	// Your Apps datasource name
-	set(dataSourceName="exampleApp");
+	//set(dataSourceName="exampleApp");
 
+	loc.moca = {};
+	loc.moca.companyName = "";
+	loc.moca.companyLogo = "";
+	loc.moca.adminEmail = "";
+	
+	set(app=loc.moca);
 	// Turn on new flashAppend Behaviour
 	set(flashAppend = true);
 
 	// Optional: Create SQL files when migrating
 	// Useful for debugging
-	// set(writeMigratorSQLFiles=true);
+	set(writeMigratorSQLFiles=true);
 
 	// Turn on URL rewriting by default.
 	// Commandbox urlrewrite.xml is provided.
