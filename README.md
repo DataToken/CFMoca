@@ -7,6 +7,10 @@ applications; it aims to demonstrate some of the framework's features such as Da
 
 ## Installation
 
+## Tested Environment
+ACF 11
+MariaDB
+
 See [Installation](https://github.com/cfwheels/cfwheels-example-app/wiki/Installation)
 
 ## Documentation
@@ -16,5 +20,6 @@ See the [Wiki](https://github.com/cfwheels/cfwheels-example-app/wiki/Installatio
 ## Requirements
 
  - Commandbox (to run locally)
- - Tested on Lucee 5.2.7 / ACF 2016
+ - Tested on Lucee 5.2.7 / ACF 2016  / ACF 11
  - MySQL 5.x
+	- MariaDB
