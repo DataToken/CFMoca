@@ -30,7 +30,7 @@ component extends="wheels.migrator.Migration" hint="Adds User Permissions" {
 			// This user can see the logs
 			 addRecord(table='userpermissions', userid=4, permissionid=2);
 			// This user has an named user permission set so they can see admin logs
-			 addRecord(table='userpermissions', userid=1, permissionid=35);
+			 addRecord(table='userpermissions', userid=1, permissionid=1);
 
 
 			} catch (any e) {

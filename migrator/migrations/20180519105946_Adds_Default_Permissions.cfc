@@ -1,3 +1,4 @@
+component extends="wheels.migrator.Migration" hint="Adds Default Permissions" {
 /*
   |-------------------------------------------------------------------------------------------|
 	| Parameter     | Required | Type    | Default | Description                                |
@@ -9,8 +10,6 @@
     EXAMPLE:
       addRecord(table='members',id=1,username='admin',password='#Hash("admin")#');
 */
-component extends="wheels.migrator.Migration" hint="Adds Default Permissions" {
-
 	function up() {
 		transaction {
 			/*
@@ -29,49 +28,49 @@ component extends="wheels.migrator.Migration" hint="Adds Default Permissions" {
 			try {
 				c=0;
 				addRecord(table='permissions', id=++c, name='admin', description='Global Administrative Access');
-				addRecord(table='rolepermissions', roleid=1, permissionid=c)
+				//addRecord(table='rolepermissions', roleid=1, permissionid=c);
 
 				addRecord(table='permissions', id=++c, name='admin.auditlogs', description='Allow Global Administrative Access to Logs');
 				addRecord(table='permissions', id=++c, name='admin.auditlogs.index', description='View Logs');
-				addRecord(table='rolepermissions', roleid=2, permissionid=c);
+				//addRecord(table='rolepermissions', roleid=2, permissionid=c);
 
-				addRecord(table='permissions', id=++c, name='admin.auditlogs.show', description='Show Log Extended Data')
+				addRecord(table='permissions', id=++c, name='admin.auditlogs.show', description='Show Log Extended Data');
 				addRecord(table='permissions', id=++c, name='admin.permissions', description='Allow Global Administrative Access to Permissions');
 				addRecord(table='permissions', id=++c, name='admin.permissions.index', description='List Permissions');
 				addRecord(table='permissions', id=++c, name='admin.permissions.edit', description='Edit Permission');
-				addRecord(table='permissions', id=++c, name='admin.permissions.update', description='Update Permission')
+				addRecord(table='permissions', id=++c, name='admin.permissions.update', description='Update Permission');
 				addRecord(table='permissions', id=++c, name='admin.settings', description='Allow Global Administrative Access to Settings');
 				addRecord(table='permissions', id=++c, name='admin.settings.index', description='List Settings');
 				addRecord(table='permissions', id=++c, name='admin.settings.edit', description='Edit Setting');
-				addRecord(table='permissions', id=++c, name='admin.settings.update', description='Update Setting')
+				addRecord(table='permissions', id=++c, name='admin.settings.update', description='Update Setting');
 				addRecord(table='permissions', id=++c, name='admin.users', description='Allow Global Administrative Access to Users');
 
 				addRecord(table='permissions', id=++c, name='admin.users.index', description='List Users');
-				addRecord(table='rolepermissions', roleid=2, permissionid=c);
+				//addRecord(table='rolepermissions', roleid=2, permissionid=c);
 
 				addRecord(table='permissions', id=++c, name='admin.users.new', description='New User');
-				addRecord(table='rolepermissions', roleid=2, permissionid=c);
+				//addRecord(table='rolepermissions', roleid=2, permissionid=c);
 
 				addRecord(table='permissions', id=++c, name='admin.users.create', description='Create User');
-				addRecord(table='rolepermissions', roleid=2, permissionid=c);
+				//addRecord(table='rolepermissions', roleid=2, permissionid=c);
 
 				addRecord(table='permissions', id=++c, name='admin.users.edit', description='Edit User');
-				addRecord(table='rolepermissions', roleid=2, permissionid=c);
+				//addRecord(table='rolepermissions', roleid=2, permissionid=c);
 
 				addRecord(table='permissions', id=++c, name='admin.users.update', description='Update User');
-				addRecord(table='rolepermissions', roleid=2, permissionid=c);
+				//addRecord(table='rolepermissions', roleid=2, permissionid=c);
 
 				addRecord(table='permissions', id=++c, name='admin.users.delete', description='Delete User');
-				addRecord(table='rolepermissions', roleid=2, permissionid=c);
+				//addRecord(table='rolepermissions', roleid=2, permissionid=c);
 
 				addRecord(table='permissions', id=++c, name='admin.users.reset', description='Reset Users Password');
-				addRecord(table='rolepermissions', roleid=2, permissionid=c);
+				//addRecord(table='rolepermissions', roleid=2, permissionid=c);
 
 				addRecord(table='permissions', id=++c, name='admin.users.recover', description='Recover User');
-				addRecord(table='rolepermissions', roleid=2, permissionid=c);
+				//addRecord(table='rolepermissions', roleid=2, permissionid=c);
 
 				addRecord(table='permissions', id=++c, name='admin.users.show', description='View User');
-				addRecord(table='rolepermissions', roleid=2, permissionid=c);
+				//addRecord(table='rolepermissions', roleid=2, permissionid=c);
 
 				addRecord(table='permissions', id=++c, name='admin.users.assume', description='Assume Users (Grant only to Admins)');
 				addRecord(table='permissions', id=++c, name='admin.users.destroy', description='Destroy Users (Grant only to Admins)');
@@ -84,8 +83,8 @@ component extends="wheels.migrator.Migration" hint="Adds Default Permissions" {
 				addRecord(table='permissions', id=++c, name='admin.roles.delete', description='Delete Role');
 
 				addRecord(table='permissions', id=++c, name='accounts', description='Allow Global Access to Own Profile');
-				addRecord(table='rolepermissions', roleid=1, permissionid=c);
-				addRecord(table='rolepermissions', roleid=2, permissionid=c);
+				//addRecord(table='rolepermissions', roleid=1, permissionid=c);
+				//addRecord(table='rolepermissions', roleid=2, permissionid=c);
 				addRecord(table='rolepermissions', roleid=3, permissionid=c);
 
 				addRecord(table='permissions', id=++c, name='accounts.show', description='View My Account');
@@ -98,7 +97,7 @@ component extends="wheels.migrator.Migration" hint="Adds Default Permissions" {
 				addRecord(table='permissions', id=++c, name='canViewAdminNotes', type="named", description='Allow user to view admin notes');
 
 				addRecord(table='permissions', id=++c, name='canViewLogData', type="named", description='Allow user to view extended log data');
-				addRecord(table='rolepermissions', roleid=1, permissionid=c);
+				//addRecord(table='rolepermissions', roleid=1, permissionid=c);
 
 			} catch (any e) {
 				local.exception = e;
