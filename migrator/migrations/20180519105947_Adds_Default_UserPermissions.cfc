@@ -26,11 +26,16 @@ component extends="wheels.migrator.Migration" hint="Adds User Permissions" {
 			*/
 
 			try {
-			// Add some test user permissions to our example user
-			// This user can see the logs
-			 addRecord(table='userpermissions', userid=4, permissionid=2);
-			// This user has an named user permission set so they can see admin logs
+			// This user has admin permission set so they can see admin
 			 addRecord(table='userpermissions', userid=1, permissionid=1);
+			// This user has editor permission set so they can see editor type settings
+			 addRecord(table='userpermissions', userid=2, permissionid=20);
+			 addRecord(table='userpermissions', userid=2, permissionid=53);
+			// These user can see the logs
+			 addRecord(table='userpermissions', userid=3, permissionid=2);
+			 addRecord(table='userpermissions', userid=3, permissionid=53);
+			 addRecord(table='userpermissions', userid=4, permissionid=2);
+			 addRecord(table='userpermissions', userid=4, permissionid=53);
 
 
 			} catch (any e) {
