@@ -13,7 +13,9 @@ migrations = application.wheels.migrator.getAvailableMigrations();
 request.$wheelsDebugSQLResult = [];
 
 // Get This migration
-for(var mig in migrations){
+//2016 for(var mig in migrations){}
+//else for backwards compatibility use the following
+for(mig in migrations){
 	if(mig["version"] EQ request.wheels.params.version){
 		migration = mig;
 	}

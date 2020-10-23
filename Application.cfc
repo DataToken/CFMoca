@@ -1,3 +1,3 @@
 component output="false" {
-	include "wheels/functions.cfm";
+	include "/wheels/functions.cfm";
 }
