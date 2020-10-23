@@ -8,8 +8,15 @@ applications; it aims to demonstrate some of the framework's features such as Da
 ## Installation
 
 ## Tested Environment
-ACF 11
-MariaDB
+- ACF 11
+- MariaDB
+
+## Installation
+- Unzip to location where hosting
+- Name Directory, this will be what the application this.name will use instead of example app name
+
+## App Settings
+- Change via site settings table, can be done before install or via the admin dash
 
 See [Installation](https://github.com/cfwheels/cfwheels-example-app/wiki/Installation)
 
