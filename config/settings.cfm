@@ -6,7 +6,10 @@
 	// set(dataSourceName="");
 	// set(dataSourceUserName="");
 	// set(dataSourcePassword="");
-
+	/**
+	//If you are needing help setting up login for admin, in sql add the following hash and change upon login
+	/ login: admin@domain.com password: Apples1234! hash: $2a$12$m7ynQrXApdA5tm2DTmtC4.b5f1609D9oJbb.JzrO4tF3Z6kHnG5lu
+	**/
 	/*
 		If you leave this setting commented out, CFWheels will try to determine the URL rewrite capabilities automatically.
 		The "URLRewriting" setting can bet set to "on", "partial" or "off".
