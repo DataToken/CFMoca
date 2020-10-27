@@ -41,7 +41,7 @@ component extends="app.controllers.Controller" {
 		// Add Log
 		addLogLine(type="auth", severity="info", message="User #nameofLogginOutUser# logged out");
 		// does this insertFlash ever work?
-		redirectTo(route="root", success="You have been logged out");
+		redirectTo(route="login", success="You have been logged out");
 	}
 
 	/**

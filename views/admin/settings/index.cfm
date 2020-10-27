@@ -1,5 +1,3 @@
-
-
 <cfparam name="settings">
 <cfparam name="settingCategories">
 <cfoutput>

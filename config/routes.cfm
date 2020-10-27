@@ -57,6 +57,8 @@
 			.resources(name="permissions", only="edit,update,index")
 			.resources(name="roles", except="show")
 			.resources(name="logs", controller="auditlogs", only="index,show")
+			.resources("pages")
+			.root(to="dashboard##index", name="dashboard")
 		.end()
 		// The root route below is the one that will be called on your application's home page (e.g. http://127.0.0.1/).
 		// You can, for example, change "wheels##wheels" to "home##index" to call the "index" action on the "home" controller instead.

@@ -7,8 +7,8 @@
 	// set(dataSourceUserName="");
 	// set(dataSourcePassword="");
 	/**
-	//If you are needing help setting up login for admin, in sql add the following hash and change upon login
-	/ login: admin@domain.com password: Apples1234! hash: $2a$12$m7ynQrXApdA5tm2DTmtC4.b5f1609D9oJbb.JzrO4tF3Z6kHnG5lu
+	//login for admin (CHANGE, do not use on production)
+	/ login: admin@domain.com password: Apples1234! 
 	**/
 	/*
 		If you leave this setting commented out, CFWheels will try to determine the URL rewrite capabilities automatically.
@@ -23,13 +23,7 @@
 
 	// Your Apps datasource name
 	//set(dataSourceName="exampleApp");
-
-	loc.moca = {};
-	loc.moca.companyName = "";
-	loc.moca.companyLogo = "";
-	loc.moca.adminEmail = "";
 	
-	set(app=loc.moca);
 	// Turn on new flashAppend Behaviour
 	set(flashAppend = true);
 
@@ -50,7 +44,7 @@
 //= 	Bootstrap 4 form settings
 //=====================================================================
 	// Submit Tag
-	set(functionName="submitTag", class="btn btn-primary", value="Save Changes");
+	set(functionName="submitTag", class="btn btn-primary-outline", value="Save Changes");
 
 	// Checkboxes and Radio Buttons
 	set(functionName="hasManyCheckBox,checkBox,checkBoxTag", labelPlacement="aroundRight", prependToLabel="<div class='form-check'>", appendToLabel="</div>", uncheckedValue="0", encode="attributes", class="form-check-input");

@@ -2,6 +2,7 @@ component extends="app.controllers.Controller" {
 
 	function config() {
 		super.config(restrictAccess=true);
+		usesLayout("/admin/dashboard/dashboard");
 		verifies(except="index,new,create", params="key", paramsTypes="integer", handler="objectNotFound");
 		filters(through="filterGetAllRoles", except="show");
 	}
@@ -13,7 +14,7 @@ component extends="app.controllers.Controller" {
 		param name="params.q" default="";
 		param name="params.roleid" default=0;
 		param name="params.page" type="numeric" default=1;
-		param name="params.perpage" type="numeric" default=50;
+		param name="params.perpage" type="numeric" default=2;
 		param name="params.status" default="active";
 
 		local.where=[];
@@ -51,6 +52,7 @@ component extends="app.controllers.Controller" {
 				arrayAppend(local.where, whereify(local.qWhere, "OR"));
 			}
 		}
+		
 		users=model("user").findAll(where=whereify(local.where), page=params.page, includeSoftDeletes=local.includeSoftDeletes, perpage=params.perpage, include="role");
 	}
 

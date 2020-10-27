@@ -2,6 +2,7 @@ component extends="app.controllers.Controller" {
 
 	function config() {
 		super.config(restrictAccess=true);
+		usesLayout("/admin/dashboard/dashboard");
 		verifies(params="userkey", paramsTypes="integer", handler="objectNotFound");
 		verifies(params="permissionid", paramsTypes="integer", only="create");
 	}

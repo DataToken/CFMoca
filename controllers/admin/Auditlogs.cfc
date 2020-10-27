@@ -2,6 +2,7 @@ component extends="app.controllers.Controller" {
 
 	function config() {
 		super.config(restrictAccess=true);
+		usesLayout("/admin/dashboard/dashboard");		
 		verifies(except="index,show", params="key", paramsTypes="integer", handler="objectNotFound");
 		filters(through="getFilterTypes", only="index");
 		filters(through="isAjaxRequest", only="show");

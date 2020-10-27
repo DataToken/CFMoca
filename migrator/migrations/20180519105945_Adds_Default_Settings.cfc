@@ -48,6 +48,32 @@ component extends="wheels.migrator.Migration" hint="Adds Default Settings" {
           			description="Cascade Permissions",
             		type="boolean",
             		value=serializeJSON("true"));
+          //email server config
+          addRecord(table='settings',
+          			name="email_server_status",
+          			description="Email Server status",
+            		type="textfield",
+            		value=serializeJSON("false"));  
+          addRecord(table='settings',
+          			name="email_server_ip",
+          			description="Email Server IP Address",
+            		type="textfield",
+            		value=serializeJSON("100.100.100.100"));
+          addRecord(table='settings',
+          			name="email_server_address",
+          			description="Email Server smtp",
+            		type="textfield",
+            		value=serializeJSON("smtp.domain.com"));
+          addRecord(table='settings',
+          			name="email_server_port",
+          			description="Email Server port",
+            		type="textfield",
+            		value=serializeJSON("25"));
+          addRecord(table='settings',
+          			name="email_server_ssl_status",
+          			description="Email Server SSL status",
+            		type="textfield",
+            		value=serializeJSON("false"));              		          
 
 
           // Email
@@ -84,12 +110,12 @@ component extends="wheels.migrator.Migration" hint="Adds Default Settings" {
           			name="general_sitename",
           			description="General Site Name",
             		type="textfield",
-            		value=serializeJSON("Example App"));
+            		value=serializeJSON("Brand Name"));
 	       addRecord(table='settings',
 	       			name="general_copyright",
 	       			description="Footer Notice",
             		type="textfield",
-            		value=serializeJSON("Copyright Example CFWheels App"));
+            		value=serializeJSON("Brand Name Copyright"));
 
 
 			} catch (any e) {

@@ -7,12 +7,16 @@
 <cfparam name="auth">
 <cfparam name="usingRememberMeCookie">
 <cfparam name="savedEmail">
+
 <cfoutput>
-<div class="row">
-	<div class="col-md-6 offset-md-3">
-	#panel(title="Login")#
-		#startFormTag(route="authenticate")#
-		#errorMessagesFor("auth")#
+#styleSheetLinkTag(sources="signin", head=true)#
+
+
+		#startFormTag(route="authenticate", class="form-signin")#
+		<!---#imageTag(source="moca.png", class="mb-4", alt="")#--->
+		
+		
+		#errorMessagesFor(objectName="auth")#
 
 		<cfif auth.allowRememberMe && usingRememberMeCookie>
 			
@@ -27,23 +31,21 @@
 		#passwordField(objectname="auth", property="password", label="Password")#
 
 	  	<cfif auth.allowRememberMe && !usingRememberMeCookie>
-	  	 	#checkbox(objectname="auth", property="rememberme", label="Remember Me")#
+	  	 	#checkbox(objectname="auth", property="rememberme", label="Remember Me", prepend="<div>", append="</div>")#
 	  	</cfif>
 
-		#submitTag(value="Login", class="btn btn-block btn-primary")#
+		#submitTag(value="Login", class="btn btn-lg btn-primary btn-block")#
 
 		<cfif getSetting("authentication_allowRegistration") OR getSetting("authentication_allowPasswordResets")>
 			<hr />
 		</cfif>
 		<cfif auth.allowUserRegistration && getSetting("authentication_allowRegistration")>
-			<p class="float-left">#linkTo(route="register", text="Register")#</p>
+			<p class="float-left">#linkTo(route="register", text="Create An Account")#</p>
 		</cfif>
 		<cfif auth.allowPasswordReset && getSetting("authentication_allowPasswordResets")>
 			<p class="float-right">#linkTo(route="Passwordreset", text="I forgot my password")#</p>
 		</cfif>
 
 		#endFormTag()#
-	#panelEnd()#
-	</div>
-</div>
+
 </cfoutput>

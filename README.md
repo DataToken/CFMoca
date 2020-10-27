@@ -7,17 +7,6 @@ applications; it aims to demonstrate some of the framework's features such as Da
 
 ## Installation
 
-## Tested Environment
-- ACF 11
-- MariaDB
-
-## Installation
-- Unzip to location where hosting
-- Name Directory, this will be what the application this.name will use instead of example app name
-
-## App Settings
-- Change via site settings table, can be done before install or via the admin dash
-
 See [Installation](https://github.com/cfwheels/cfwheels-example-app/wiki/Installation)
 
 ## Documentation
@@ -27,6 +16,5 @@ See the [Wiki](https://github.com/cfwheels/cfwheels-example-app/wiki/Installatio
 ## Requirements
 
  - Commandbox (to run locally)
- - Tested on Lucee 5.2.7 / ACF 2016  / ACF 11
+ - Tested on Lucee 5.2.7 / ACF 2016
  - MySQL 5.x
-	- MariaDB

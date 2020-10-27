@@ -14,8 +14,8 @@ component extends="wheels.migrator.Migration" hint="Adds Default User Accounts" 
 	function up() {
 		transaction {
 			try {
-				//Password123!
-			 	addRecord(table='users', verified=1, firstname="Example", lastname="Administrator", email="admin@domain.com", roleid=1, createdAt=now(), passwordHash="$2a$12$aUqhjsUm.BtrlrIxHFEMsO.LN.WbEd6hYYwsh3V5Rph5gL454e7Xi", adminNotes="This is a an example Administrator Account" );
+				//Apples1234!
+			 	addRecord(table='users', verified=1, firstname="Example", lastname="Administrator", email="admin@domain.com", roleid=1, createdAt=now(), passwordHash="$2a$12$m7ynQrXApdA5tm2DTmtC4.b5f1609D9oJbb.JzrO4tF3Z6kHnG5lu", adminNotes="This is a an example Administrator Account" );
 			 	addRecord(table='users', verified=1, firstname="Example", lastname="Editor", email="editor@domain.com", roleid=2, createdAt=now(), passwordHash="$2a$12$aUqhjsUm.BtrlrIxHFEMsO.LN.WbEd6hYYwsh3V5Rph5gL454e7Xi", adminNotes="This is a an example Editor Account" );
 			 	addRecord(table='users', verified=1, firstname="Example", lastname="User", email="user@domain.com", roleid=3, createdAt=now(), passwordHash="$2a$12$aUqhjsUm.BtrlrIxHFEMsO.LN.WbEd6hYYwsh3V5Rph5gL454e7Xi", adminNotes="This is a an example User Account" );
 			 	addRecord(table='users', verified=1, firstname="Another", lastname="User", email="user2@domain.com", roleid=3, createdAt=now(), passwordHash="$2a$12$aUqhjsUm.BtrlrIxHFEMsO.LN.WbEd6hYYwsh3V5Rph5gL454e7Xi", adminNotes="This is a an example User Account with some user permissions set" );
