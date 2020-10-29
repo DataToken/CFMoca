@@ -10,8 +10,9 @@
 	#textFieldTag	(objectName	="mpage", property	="metaauthor", 		label="Author", 			name="metaauthor")#
 	#textFieldTag	(objectName	="mpage", property	="metakeywords",	label="Keywords", 			name="metakeywords")#
 	#textFieldTag	(objectName	="mpage", property	="metadescription", label="Description", 		name="metadescription")#
-	#textFieldTag	(objectName	="mpage", property	="excerpt", 		label="excerpt", 			name="excerpt")#
-	#textareaTag	(objectName	="mpage", property	="content", 		label="content", 			name="content")#
+	#textFieldTag	(objectName	="mpage", property	="excerpt", 		label="Excerpt", 			name="excerpt")#
+	#textareaTag	(objectName	="mpage", property	="content",			label="Page Content", 		name="content", class="summernote")#
+	
 	#hiddenFieldTag	(objectName	="mpage", property	="pageStatus",	name="pageStatus", value="0")#
 	
 	#submitTag(value="Create Page", class="mt-4 btn btn-outline-primary")#

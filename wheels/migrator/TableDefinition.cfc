@@ -327,6 +327,27 @@ component extends="Base" {
 		}
 		return this;
 	}
+	
+	/**
+ 	* adds longtext columns to table definition
+ 	*
+ 	* [section: Migrator]
+ 	* [category: Table Definition Functions]
+ 	*/
+	public any function longtext(
+		string columnNames,
+		string default,
+		boolean null
+	) {
+		$combineArguments(args=arguments, combine="columnNames,columnName", required=true);
+		arguments.columnType = "longtext";
+		local.iEnd = ListLen(arguments.columnNames);
+		for (local.i = 1; local.i <= local.iEnd; local.i++) {
+			arguments.columnName = Trim(ListGetAt(arguments.columnNames, local.i));
+			column(argumentCollection=arguments);
+		}
+		return this;
+	}
 
 	/**
  	* adds UUID columns to table definition

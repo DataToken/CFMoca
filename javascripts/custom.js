@@ -1,5 +1,30 @@
 $(document).ready(function($) {
 
+	//summernote init        
+		$('textarea.summernote').summernote({
+	        height: 550,
+	        
+	        toolbar: [
+        	  ['view',['fullscreen','codeview']],
+   	          ['custom1', ['blocks','grid']],
+	          ['group1', ['style']],
+	          ['media',  ['picture' , 'link', 'video']],
+	          ['group2', ['color', 'fontsize', 'bold', 'italic', 'underline', 'clear']],
+	          ['insert', ['specialchars', 'hr']],
+	          ['para', ['ul', 'ol', 'paragraph','table']],
+	          ['height', ['height']],
+	          ['insert', ['cleaner']],
+	          ['code', ['help']]  
+	        ],
+	        templates: {
+        		templates: '/javascripts/summernote/plugin/pageTemplates/page-templates/', // The folder where the templates are stored.
+        		insertDetails: false, // true|false This toggles whether the below options are automatically filled when inserting the chosen page template.
+    		},
+    		blocks:{
+    			templates: '/javascripts/summernote/plugin/pageTemplates/bootstrap-templates/'
+    		}	 
+		});
+		
 	// Logging modals
 	$('#logModalCenter').on('show.bs.modal', function (e) {
 	  var link = $(e.relatedTarget);

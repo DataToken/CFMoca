@@ -75,9 +75,10 @@ component extends="app.controllers.Controller" {
 		mpage.excerpt = params.excerpt;
 		mpage.content = params.content;
 		mpage.pageStatus = params.pageStatus;
-		
+		mpage.createdat = now();
+				
 		//Activate page on submission
-		//mpage.pagestatus = 1;
+		mpage.pagestatus = 1;
 		
 		//save condition
 		if(mpage.save()){
@@ -105,13 +106,13 @@ component extends="app.controllers.Controller" {
 	
 		mpage=model("page").findByKey(params.key);
 		
-		mpage.page = params.mpage.name;
-		mpage.headerImage = params.mpage.headerImage;
-		mpage.metaAuthor = params.mpage.metaAuthor ;
-		mpage.metaKeywords = params.mpage.metaKeywords;
-		mpage.metaDescription = params.mpage.metaDescription;
-		mpage.excerpt = params.mpage.excerpt;
-		mpage.content = params.mpage.content;
+		mpage.name = mpage.name;
+		mpage.headerImage = mpage.headerImage;
+		mpage.metaAuthor = mpage.metaAuthor ;
+		mpage.metaKeywords = mpage.metaKeywords;
+		mpage.metaDescription = mpage.metaDescription;
+		mpage.excerpt = mpage.excerpt;
+		mpage.content = mpage.content;
 			
 		//update
 		if(mpage.update(params.mpage)){

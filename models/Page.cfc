@@ -38,8 +38,7 @@ component extends="Model"  {
 			this.metaDescription = sanitizeInput(this.metaDescription);
 		if(structKeyExists(this, "excerpt"))
 			this.excerpt = sanitizeInput(this.excerpt);
-		if(structKeyExists(this, "content"))
-			this.content = sanitizeInput(this.content);			
+		
 	}
 	
 }

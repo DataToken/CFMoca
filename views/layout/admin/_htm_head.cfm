@@ -16,9 +16,7 @@
     <!---<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" />--->
     <link rel="stylesheet" type="text/css" href="/stylesheets/fontawesome-free/css/all.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-    <link rel="stylesheet" type="text/css" href="/stylesheets/jquery-confirm.min.css" />
-    <link rel="stylesheet" type="text/css" href="/stylesheets/sb-admin-2.min.css" />    
-    #stylesheetLinkTag("custom")#
+	#includePartial(partial="/admin/assets/css")#
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
