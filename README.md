@@ -5,7 +5,7 @@
 ![ScreenShot](https://github.com/DataToken/CFMocha/blob/master/images/Image%204.jpg)
 
 ## About CF MOCA
-*NOT* a complete Content Management System, work in progress; CFMoca aims at simplifying the W's. Where are my files? Why can't it just be routed? What is it doing? Who can answer my question?
+*NOT* a complete Content Management System, work in progress; CFMoca aims at simplifying the W's. Where are my files? Why can't it just be routed? What is it doing? Who can answer my question? What about simple drag and drop development?
 
 - Honestly because it's built with CFWheels the answers to pretty much any W is answered with the community of CFWheels. The documentation is fairly ubundant. Best of all you can see so me different examples that you can create your own plugins, components, and site structure without feeling like you have no place, person, organization to turn too. 
 
